@@ -13,6 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+Route::get('/user', function (Request $request) { return $request->user();})->middleware('auth:api');
+
+Route::get('/tasks', function (Request $request) {
+    return [
+        ['id' => 1, 'name' => 'task 1', 'description' => 'desc 1', 'status' => 'todo'],
+        ['id' => 2, 'name' => 'task 2', 'description' => '','status' => 'in_progress'],
+        ['id' => 3, 'name' => 'task 3', 'description' => '','status' => 'done'],
+        ['id' => 4, 'name' => 'task 4', 'description' => 'other description','status' => 'in_progress'],
+
+    ];
+});
