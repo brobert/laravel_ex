@@ -20,7 +20,7 @@ class BoardComponent extends React.Component {
         })
         return (
             <div className="panel panel-default">
-                <div className="panel-heading">{this.props.name} [{this.props.tasks.length}]</div>
+                <div className="panel-heading">{this.props.name} [{this.props.tasks.length} / {this.props.taskCountAll}]</div>
                 <div className="panel-body">
                     {tasks}
                 </div>
