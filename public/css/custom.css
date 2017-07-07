@@ -112,4 +112,6 @@ body nav.app-menu ul.main-menu li:last-child {padding-right: 0px}
     margin: 0px;
     padding: 0px;
     text-transform: capitalize;
+    text-decoration: underline;
+    cursor: pointer
 }
