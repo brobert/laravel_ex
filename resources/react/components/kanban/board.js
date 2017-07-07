@@ -42,8 +42,8 @@ class BoardComponent extends React.Component {
         const taskLists = this.state.taskTypes.map(
             ( taskType ) => {
                 return (
-                    <div 
-                        className='col-md-1'
+                    <li 
+                        className='board-culumn-type'
                         key={taskType}
                     >
                         <List 
@@ -52,22 +52,17 @@ class BoardComponent extends React.Component {
                             name={taskType}
                             key={taskType}
                         />
-                    </div>
+                    </li>
                 );
             }
         );
         
         console.info(taskLists);
         return (
-            <div>
-                <div className='row'>
-                    <div className='col-md-12'>
-                        Tasks : <span>{this.state.tasks.length}</span>
-                    </div>
-                </div>
-                <div className='row'>
+            <div className="board-component">
+                <ul className="board-type-list">
                     {taskLists}
-                </div>
+                </ul>
             </div>
         );
     }

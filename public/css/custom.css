@@ -21,9 +21,30 @@ body {
     padding: 20px;
     border: 1px solid #c0c0c0;
 }
+
+body nav.app-menu {
+    display: block;
+    border-bottom: solid 1px #e0e0e0;
+    margin-bottom: 10px;
+}
+
+body nav.app-menu .main-menu li {
+    list-style: none;
+    display: initial;
+    padding: 0 1em;
+    text-transform: uppercase;
+}
+
+body nav.app-menu ul.main-menu {padding: 0px;}
+
+body nav.app-menu ul.main-menu li:first-child {padding-left: 0px}
+
+body nav.app-menu ul.main-menu li:last-child {padding-right: 0px}
+
 .full-height {
     height: 100vh;
 }
+
 .flex-center {
     align-items: center;
     display: flex;
@@ -54,4 +75,41 @@ body {
 }
 .m-b-md {
     margin-bottom: 30px;
+}
+
+.board-type-list {
+    box-sizing: border-box;
+    border-spacing: 10px 0;
+    display: table;
+    list-style: none;
+    margin: 0;
+    table-layout: fixed;
+    width: 100%;
+    padding: 0;
+}
+.board-culumn-type {
+    border: none;
+    border-right: 2px solid #44FF44;
+    display: table-cell;
+    margin: 0px;
+    padding-right: 10px;
+    height: 100%;
+}
+.board-culumn-type:last-child {
+    border-right: none;
+    padding-right: 0px
+}
+
+.list-type-title {
+    border-bottom: 1px solid #c0c0c0;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    text-rendering: optimizeSpeed;
+    text-align-last: center;
+}
+
+.task-component .task-title {
+    margin: 0px;
+    padding: 0px;
+    text-transform: capitalize;
 }

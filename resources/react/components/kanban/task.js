@@ -12,11 +12,11 @@ class TaskComponent extends React.Component {
       console.info();
       const task = this.props.task;
     return (
-        <div className="panel panel-default">
-            <div className="panel-heading">{task.name}</div>
-            <div className="panel-body">
+        <div className="task-component well">
+            <h5 className="task-title">{task.name}</h5>
+            <div className="">
                 {   task.description
-                    ?(<div className="well">{task.description}</div>)
+                    ?(<div className="">{task.description}</div>)
                     : null
                 }
             </div>
