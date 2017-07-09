@@ -6,9 +6,10 @@
     "build": "node_modules/.bin/webpack -d"
   },
   "devDependencies": {
-    "babel-core": "^5.8.*",
+    "webpack": "^2.*.*",
+    "underscore": "^1.*.*",
+    "babel-core": "^6.*.*",
     "babel-loader": "^7.1.0",
-    "webpack": "^1.12.*",
     "babel-cli": "^6.18.0",
     "babel-preset-env": "^1.1.4",
     "bootstrap-sass": "^3.3.7",
@@ -19,6 +20,9 @@
   "dependencies": {
     "axios": "^0.16.2",
     "react": "^15.4.1",
+    "react-classnames": "^0.1.2",
+    "react-dnd": "^2.4.0",
+    "react-dnd-html5-backend": "^1.0.0",
     "react-dom": "^15.4.1"
   }
 }

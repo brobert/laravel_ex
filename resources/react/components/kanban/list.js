@@ -5,16 +5,18 @@ class ListComponent extends React.Component {
 
     constructor(props) {
         super(props);
+        
+        this.refreshTaskList = this.props.refreshTaskList.bind(this);
     }
 
     render() {
         
         let tasks = this.props.tasks.map( (task) => {
-            console.info('----- TASK')
             return (
                 <TaskComponent
                     key={task.id}
                     task={task}
+                	refreshTaskList={this.refreshTaskList}
                 />
             );
         })

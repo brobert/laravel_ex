@@ -15,6 +15,8 @@ use Illuminate\Http\Request;
 
 Route::get('/user', function (Request $request) { return $request->user();})->middleware('auth:api');
 
+Route::resource('task', 'ReacttaskController');
+
 Route::get('/tasks', function (Request $request) {
     return [
         ['id' => 1, 'name' => 'task 1', 'description' => 'desc 1',              'status' => 'todo'    ],
@@ -24,3 +26,4 @@ Route::get('/tasks', function (Request $request) {
 
     ];
 });
+//     Route::post('/task/{taskid}', function($taskid, Request $request) {return [$taskid, $request->all()];});
