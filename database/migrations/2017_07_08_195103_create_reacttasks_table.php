@@ -17,7 +17,7 @@ class CreateReacttasksTable extends Migration
             $table->increments('id');
             $table->string('name', 50);
             $table->string('description', 255)->nullable();
-            $table->enum('status', ['todo', 'in-progres', 'ready', 'done'])->default('todo');
+            $table->enum('status', ['todo', 'in-progress', 'ready', 'done'])->default('todo');
             $table->softDeletes();
             $table->timestamps();
 
