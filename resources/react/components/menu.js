@@ -3,6 +3,7 @@
  */
 // imports
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class MenuComponent extends React.Component {
     
@@ -14,8 +15,8 @@ class MenuComponent extends React.Component {
         return (
             <nav className="app-menu">
                 <ul className="main-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/kanban">Kanban</Link></li>
                 </ul>
             </nav>
         );

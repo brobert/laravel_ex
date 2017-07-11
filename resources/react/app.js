@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {render} from 'react-dom';
-import AwesomeComponent from './AwesomeComponent.js';
-import BoardComponent from './components/kanban/board';
-import MenuComponent from './components/menu';
 
-class Hello extends React.Component {
+import MenuComponent from './components/menu';
+import HomeSite from './sites/home';
+import KanbanSite from './sites/kanban';
+
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+class App extends Component {
     render() {
+    	
         return (
-            <div>
-                <MenuComponent />
-                <BoardComponent />
-            </div>
-        );
+			<Router>
+			    <div className="">
+			    	<MenuComponent />
+			    	<Route exact path="/" component={HomeSite} />
+			    	<Route path="/kanban" component={KanbanSite} />
+			    </div>
+			</Router>
+		);
     }
 }
 
-render(<Hello />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));

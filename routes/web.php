@@ -11,5 +11,12 @@
 |
 */
 
-Route::get( '/',      function() { return view('welcome'); } );
+Route::get( '/',      function() { return view( 'react' ); } );
 Route::get( '/react', function() { return view( 'react' ); } );
+// Route::get( '(:all?)',function() { return view( 'react' ); } );
+
+Route::get('/{any}', function ($any) {
+    // any other url, subfolders also
+    return View::make('react');
+})->where('any', '.*');
+
