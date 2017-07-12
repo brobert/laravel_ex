@@ -17,6 +17,7 @@ class MenuComponent extends React.Component {
                 <ul className="main-menu">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/kanban">Kanban</Link></li>
+                    <li><Link to='/diagram'>Grafiki</Link></li>
                 </ul>
             </nav>
         );
