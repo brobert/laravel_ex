@@ -5,3 +5,9 @@
 Homestead.json
 Homestead.yaml
 .env
+.buildpath
+.project
+.settings/
+composer.lock
+public/js/bundle.js
+public/js/bundle.js.map
