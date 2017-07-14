@@ -23,11 +23,10 @@ class CreateModalComponent extends React.Component {
         this.handleChange        = this.handleChange.bind(this);
         this.handleChangeName    = this.handleChangeName.bind(this);
         this.handleChangeDesc    = this.handleChangeDesc.bind(this);
-//        this.createTask          = this.props.saveTask;
+        this.createTask          = this.createTask.bind(this);
+        this.closeModal          = this.closeModal.bind(this);
     }
-    
-    
-    
+
     getValidationState() {
         const length = this.state.taskName.length;
         if (length > 5) return 'success';
@@ -48,9 +47,10 @@ class CreateModalComponent extends React.Component {
         this.setState(nextState);
     }
     
-    close() {
-        
+    closeModal() {
+        this.props.closeModal();
     }
+    
     createTask() {
         
         this.props.saveTask({
@@ -63,7 +63,7 @@ class CreateModalComponent extends React.Component {
         console.info('MODAL::PROPS: ', this.props )
         
         return (
-            <Modal show={this.props.modal} onHide={this.props.close}>
+            <Modal show={this.props.modal} onHide={this.closeModal}>
                 <Modal.Header closeButton>
                     <Modal.Title>Dodaj zadanie</Modal.Title>
                 </Modal.Header>
@@ -96,7 +96,7 @@ class CreateModalComponent extends React.Component {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button onClick={this.createTask} bsStyle="info">Create</Button>
-                    <Button onClick={this.close}>Close</Button>
+                    <Button onClick={this.closeModal}>Close</Button>
                 </Modal.Footer>
             </Modal>
         );

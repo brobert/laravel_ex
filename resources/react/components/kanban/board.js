@@ -19,9 +19,9 @@ class BoardComponent extends React.Component {
         };
         this.loadTaskList        = this.loadTaskList.bind(this);
         this.createModalHandler  = this.createModalHandler.bind(this);
-        this.close               = this.close.bind(this);
+        this.closeModal          = this.closeModal.bind(this);
         this.open                = this.open.bind(this);
-        this.saveTask           = this.saveTask.bind(this);
+        this.saveTask            = this.saveTask.bind(this);
 
 
         
@@ -53,7 +53,7 @@ class BoardComponent extends React.Component {
     saveTask(taskData) {
 
         const closeModal = () => {
-            this.close()
+            this.closeModal()
         }
         
         const refreshTaskList = () => {
@@ -73,7 +73,7 @@ class BoardComponent extends React.Component {
         });
     }
 
-    close() {
+    closeModal() {
         this.setState({ modal: false });
     };
 
@@ -91,7 +91,7 @@ class BoardComponent extends React.Component {
             <CreateModal 
                 {...this.state}
                 saveTask={this.saveTask}
-                close={this.close}
+                closeModal={this.closeModal}
             />
         );
         
