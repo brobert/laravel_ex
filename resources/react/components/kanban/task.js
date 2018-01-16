@@ -62,8 +62,13 @@ class TaskComponent extends React.Component {
     render() {
         const task = this.props.task;
         
+        const title = task.name;
+        const i = task.id;
+        
         let detailClass = this.state.showDetails? 'up': 'down';
         let componentCssClass = this.state.ready?"ready": "";
+        
+        console.info('----->>>> ', task)
         return (
             <div className={`task-component well ${componentCssClass}`}>
             	<div className="task-preloader"/>
@@ -78,14 +83,13 @@ class TaskComponent extends React.Component {
                     ? (
                         <div className="detail-section">
                             {   task.description
-                                ?(<div className="">{task.description}</div>)
+                                ?(<div className="alert alert-primary">{task.description}</div>)
                                 : null
                             }
         	                <DropdownButton 
         	                	title={task.status} 
     	                		id="bg-nested-dropdown"
 	                			onSelect={this.ddChangeOptionHandler}
-	        	                noCaret
                 			>
         	                	{
         	                		this.statuses.map(

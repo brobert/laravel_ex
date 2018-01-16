@@ -13,6 +13,9 @@ class KanbanHeader extends React.Component {
     render() {
         return (
             <div className="kanban-header row">
+            	<div className="col-md-10">
+            		<h2>Kanban komponent</h2>
+            	</div>
                 <div className="col-md-1 col-xs-4 pull-right">
                     <Button
                         block

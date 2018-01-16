@@ -10,7 +10,7 @@ class HomeSite extends React.Component {
 	}
 	
 	render() {
-		return <h1>Home site.</h1>
+		return <h2>Home site.</h2>
 	}
 }
 
